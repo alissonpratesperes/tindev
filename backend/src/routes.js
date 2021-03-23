@@ -5,8 +5,7 @@ const routes = express.Router();
         return response.json({ message: `Hello ${request.query.name}` });        
     });
     routes.post('/devs', (request, response) => {
-        console.log(request.body);
-            return response.json({ ok: true });
+        return response.json(request.body);
     });
 
         module.exports = routes;
