@@ -1,5 +1,7 @@
-module.exports = {
-    store() {
-        
+const Dev = require('../models/Dev');
+
+    module.exports = {
+        store() {
+            
+        }
     }
-}
