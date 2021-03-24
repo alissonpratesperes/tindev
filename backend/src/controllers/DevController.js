@@ -9,6 +9,6 @@ const Dev = require('../models/Dev');
             const apiResponse = await axios.get(`https://api.github.com/users/${username}`);
             const { name, bio, avatar_url: avatar } = apiResponse.data;    
             const dev = await Dev.create({ name, user: username, bio, avatar });    
-                return response.json(dev);
+                    return response.json(dev);
         }
     };
