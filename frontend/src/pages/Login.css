@@ -7,19 +7,29 @@ div.login-container {
 
 div.login-container form {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
+}
+
+div.login-container form img {
+    height: 65px;
 }
 
 div.login-container form input {
     margin-top: 20px;
     border: 1px solid #DDDDDD;
-    border-radius: 4px;
-    height: 48px;
+    border-radius: 10px;
+    height: 50px;
     padding: 0px 20px;
-    font-size: 16px;
+    font-size: 20px;
     color: #666666;
+    transition: 0.2s ease-in-out;
+    transition-property: border;
+}
+
+div.login-container form input:focus {
+    border: 1px solid #666666;
 }
 
 div.login-container form input::placeholder {
@@ -29,11 +39,18 @@ div.login-container form input::placeholder {
 div.login-container form button {
     margin-top: 10px;
     border: 0px;
-    border-radius: 4px;
-    height: 48px;
+    border-radius: 10px;
+    height: 50px;
     font-size: 16px;
-    background-color: #DF4723;
     font-weight: bold;
+    text-transform: uppercase;
+    background-color: #DF4723;
     color: #FFFFFF;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
+    transition-property: opacity;
+}
+
+div.login-container form button:hover {
+    opacity: 0.8;
 }
