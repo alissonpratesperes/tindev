@@ -45,6 +45,7 @@ div.login-container form button {
     font-weight: bold;
     text-transform: uppercase;
     background-color: #DF4723;
+    opacity: 0.8;
     color: #FFFFFF;
     cursor: pointer;
     transition: 0.2s ease-in-out;
@@ -52,5 +53,5 @@ div.login-container form button {
 }
 
 div.login-container form button:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
