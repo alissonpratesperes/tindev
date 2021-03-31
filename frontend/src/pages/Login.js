@@ -10,8 +10,9 @@ import logo from '../assets/logo.svg';
                 event.preventDefault();
                     console.log(`User "${username}" logged.`);
                         const response = await api.post('/devs', { username });
-                            console.log(response);
-                                history.push('/main');
+                            const { _id } = response.data;
+                                console.log(response);
+                                    history.push(`/dev/${_id}`);
             }
 
                 return (
