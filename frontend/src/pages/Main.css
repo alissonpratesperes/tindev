@@ -1,16 +1,19 @@
 div.main-container {
-    max-width: 980px;
+    max-width: 1000px;
     margin: 0px auto;
-    border: 1px solid black;
     padding: 50px 0px;
     text-align: center;
+}
+
+div.main-container > img {
+    height: 65px;
 }
 
 div.main-container ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    grid-gap: 40px;
     margin-top: 50px;
 }
 
@@ -19,34 +22,33 @@ div.main-container ul li {
     flex-direction: column;
 }
 
-div.main-container ul li img {
+div.main-container ul li > img {
     max-width: 100%;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 div.main-container ul li footer {
     flex: 1;
     background-color: #FFFFFF;
-    border: 1px solid #EEEEEE;
     padding: 15px 20px;
     text-align: left;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 div.main-container ul li footer strong {
-    font-size: 16px;
+    font-size: 18px;
     color: #333333;
 }
 
 div.main-container ul li footer p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     color: #999999;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 div.main-container ul li div.buttons {
-    margin-top: 10px;
+    margin-top: 15px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
@@ -54,9 +56,26 @@ div.main-container ul li div.buttons {
 
 div.main-container ul li div.buttons button {
     height: 50px;
-    box-shadow: 0px 2px 2px 0 rgb(0, 0, 0, 0.05);
     border: 0px;
-    border-radius: 4px;
+    border-radius: 10px 10px 10px 10px;
     background-color: #FFFFFF;
     cursor: pointer;
+}
+
+div.main-container ul li div.buttons button > img {
+    height: 25px;
+    transition: 0.2s ease;
+    transition-property: height;
+}
+
+div.main-container ul li div.buttons button:hover img {
+    height: 35px;
+}
+
+div.main-container ul li div.buttons button.dislike {
+    background-color: rgba(252, 100, 100, 0.15);
+}
+
+div.main-container ul li div.buttons button.like {
+    background-color: rgba(68, 236, 204, 0.15);
 }

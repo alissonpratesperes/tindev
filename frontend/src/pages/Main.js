@@ -16,8 +16,8 @@ import like from '../assets/like.svg';
                                         <p> Newbie but focused. </p>
                                 </footer>
                                     <div className="buttons">
-                                        <button type="button"> <img src={dislike} alt="Dislike"/> </button>
-                                        <button type="button"> <img src={like} alt="Like"/> </button>
+                                        <button type="button" className="dislike"> <img src={dislike} alt="Dislike"/> </button>
+                                        <button type="button" className="like"> <img src={like} alt="Like"/> </button>
                                     </div>
                         </li>
                         <li>
@@ -27,8 +27,8 @@ import like from '../assets/like.svg';
                                         <p> CTO at @Rocketseat. Passionate about education and changing people's lives through programming. </p>
                                 </footer>
                                     <div className="buttons">
-                                        <button type="button"> <img src={dislike} alt="Dislike"/> </button>
-                                        <button type="button"> <img src={like} alt="Like"/> </button>
+                                        <button type="button" className="dislike"> <img src={dislike} alt="Dislike"/> </button>
+                                        <button type="button" className="like"> <img src={like} alt="Like"/> </button>
                                     </div>
                         </li>
                         <li>
@@ -38,8 +38,8 @@ import like from '../assets/like.svg';
                                         <p> An instructor focused on helping people start programming for web - #html #css #javascript #sql #react #nodejs #fullstack </p>
                                 </footer>
                                     <div className="buttons">
-                                        <button type="button"> <img src={dislike} alt="Dislike"/> </button>
-                                        <button type="button"> <img src={like} alt="Like"/> </button>
+                                        <button type="button" className="dislike"> <img src={dislike} alt="Dislike"/> </button>
+                                        <button type="button" className="like"> <img src={like} alt="Like"/> </button>
                                     </div>
                         </li>
                         <li>
@@ -49,8 +49,8 @@ import like from '../assets/like.svg';
                                         <p> Vou fazer você se apaixonar por programação! </p>
                                 </footer>
                                     <div className="buttons">
-                                        <button type="button"> <img src={dislike} alt="Dislike"/> </button>
-                                        <button type="button"> <img src={like} alt="Like"/> </button>
+                                        <button type="button" className="dislike"> <img src={dislike} alt="Dislike"/> </button>
+                                        <button type="button" className="like"> <img src={like} alt="Like"/> </button>
                                     </div>
                         </li>
                     </ul>
