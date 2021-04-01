@@ -10,9 +10,9 @@ import logo from '../assets/logo.svg';
                 event.preventDefault();
                     console.log(`User "${username}" logged.`);
                         const response = await api.post('/devs', { username });
-                            const { _id } = response.data;
-                                console.log(response);
-                                    history.push(`/dev/${_id}`);
+                        const { _id } = response.data;
+                            console.log(response);
+                                history.push(`/dev/${_id}`);
             }
 
                 return (
@@ -20,7 +20,7 @@ import logo from '../assets/logo.svg';
                         <form onSubmit={handleSubmit}>
                             <img src={logo} alt="tindev"/>
                                 <input type="text" placeholder="Insira seu usuário do GitHub" value={username} onChange={event => setUsername(event.target.value)}/>
-                                <button type="submit"> Entrar </button>
+                                    <button type="submit"> Entrar </button>
                         </form>
                     </div>
                 );
