@@ -11,8 +11,8 @@ import logo from '../assets/logo.svg';
                     console.log(`User "${username}" logged.`);
                         const response = await api.post('/devs', { username });
                         const { _id } = response.data;
-                            console.log(response);
-                                history.push(`/dev/${_id}`);
+                    console.log(response);
+                            history.push(`/dev/${_id}`);
             }
 
                 return (
