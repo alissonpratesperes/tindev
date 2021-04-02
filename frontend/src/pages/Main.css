@@ -79,3 +79,17 @@ div.main-container ul li div.buttons button.dislike {
 div.main-container ul li div.buttons button.like {
     background-color: rgba(68, 236, 204, 0.15);
 }
+
+div.main-container div.empty {
+    font-size: 30px;
+    font-weight: bold;
+    color: #999999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.main-container div.empty span.emptySpan {
+    color: #DF4723;
+}
