@@ -20,6 +20,7 @@ import api from '../services/api';
                 async function handleDislike(id) {
                     await api.post(`/devs/${id}/dislikes`, null, { headers: { user: match.params.id } });
                         console.log(`User "${id}" disliked.`);
+                            setUsers(users.filter(user => user._id !== id));
                 }
                 async function handleLike(id) {
                     console.log(`User "${id}" liked.`)
