@@ -25,6 +25,7 @@ import api from '../services/api';
                 async function handleLike(id) {
                     await api.post(`/devs/${id}/likes`, null, { headers: { user: match.params.id } });
                         console.log(`User "${id}" liked.`);
+                            setUsers(users.filter(user => user._id !== id));
                 }
 
                     return (
