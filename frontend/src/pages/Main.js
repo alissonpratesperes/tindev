@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Main.css';
 import logo from '../assets/logo.svg';
 import dislike from '../assets/dislike.svg';
@@ -30,7 +31,9 @@ import api from '../services/api';
 
                     return (
                         <div className="main-container">
-                            <img src={logo} alt="tindev"/>
+                            <Link to="/">
+                                <img src={logo} className="mainLogo" alt="tindev"/>
+                            </Link>
                                 {users.length > 0 ? (
                                     <ul>
                                         {users.map(user => (

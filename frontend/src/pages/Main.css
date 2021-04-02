@@ -5,7 +5,7 @@ div.main-container {
     text-align: center;
 }
 
-div.main-container > img {
+div.main-container img.mainLogo {
     height: 65px;
 }
 
