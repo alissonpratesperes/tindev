@@ -1,16 +1,16 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
+import { KeyboardAvoidingView, Platform, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import logo from '../assets/logo.png';
 
     export default function Login() {
         return (
-            <View style={styles.container}>
+            <KeyboardAvoidingView behavior="padding" enabled={Platform.OS === 'ios'} style={styles.container}>
                 <Image source={logo}/>
-                    <TextInput placeholder="Insira seu usuário do GitHub" placeholderTextColor="#999999" style={styles.input}/>
+                    <TextInput autoCapitalize="none" autoCorrect={false} placeholder="Insira seu usuário do GitHub" placeholderTextColor="#999999" style={styles.input}/>
                         <TouchableOpacity style={styles.button}>
                             <Text style={styles.buttonText}> Entrar </Text>
                         </TouchableOpacity>
-            </View>
+            </KeyboardAvoidingView>
         );
     }
 
