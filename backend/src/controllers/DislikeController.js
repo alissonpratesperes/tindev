@@ -9,6 +9,6 @@ const Dev = require('../models/Dev');
                 if(!targetDev) { return response.status(400).json({ error: 'This Developer does not exists.' }); }
                     loggedDev.dislikes.push(targetDev._id);
                         await loggedDev.save();
-                return response.json(loggedDev);
+                            return response.json(loggedDev);
         }
     }

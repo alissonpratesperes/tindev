@@ -14,12 +14,11 @@ import { View, Text, StyleSheet } from 'react-native';
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#7159C1'
+        backgroundColor: '#FFFFFF'
       },
       text: {
         fontWeight: 'bold',
-        color: '#FFFFFF',
+        color: '#7159C1',
         fontSize: 20
       }
     });
-

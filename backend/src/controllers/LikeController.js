@@ -10,6 +10,6 @@ const Dev = require('../models/Dev');
                 if(targetDev.likes.includes(loggedDev._id)) { console.log('Match.') }  
                     loggedDev.likes.push(targetDev._id);
                         await loggedDev.save();
-                return response.json(loggedDev);
+                            return response.json(loggedDev);
         }
     }
