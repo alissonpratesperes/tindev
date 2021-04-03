@@ -8,7 +8,7 @@ import logo from '../assets/logo.png';
                 <Image source={logo}/>
                     <TextInput placeholder="Insira seu usuário do GitHub" placeholderTextColor="#999999" style={styles.input}/>
                         <TouchableOpacity style={styles.button}>
-                            <Text style={styles.buttonText}> Enviar </Text>
+                            <Text style={styles.buttonText}> Entrar </Text>
                         </TouchableOpacity>
             </View>
         );
@@ -28,15 +28,17 @@ import logo from '../assets/logo.png';
                 backgroundColor: '#FFFFFF',
                 borderWidth: 1,
                 borderColor: '#DDDDDD',
-                borderRadius: 4,
+                borderRadius: 10,
                 marginTop: 20,
-                paddingHorizontal: 15
+                paddingHorizontal: 20,
+                fontSize: 20,
+                color: '#666666'
             },
             button: {
-                height: 46,
+                height: 50,
                 alignSelf: 'stretch',
-                backgroundColor: "#Df4723",
-                borderRadius: 4,
+                backgroundColor: "#DF4723",
+                borderRadius: 10,
                 marginTop: 10,
                 justifyContent: 'center',
                 alignItems: 'center'
@@ -44,6 +46,7 @@ import logo from '../assets/logo.png';
             buttonText: {
                 color: '#FFFFFF',
                 fontWeight: 'bold',
-                fontSize: 16
+                fontSize: 16,
+                textTransform: 'uppercase'
             }
         });
