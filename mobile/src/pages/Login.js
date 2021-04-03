@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { KeyboardAvoidingView, Platform, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import logo from '../assets/logo.png';
 
-    export default function Login() {
-        return (
-            <KeyboardAvoidingView behavior="padding" enabled={Platform.OS === 'ios'} style={styles.container}>
-                <Image source={logo}/>
-                    <TextInput autoCapitalize="none" autoCorrect={false} placeholder="Insira seu usuário do GitHub" placeholderTextColor="#999999" style={styles.input}/>
-                        <TouchableOpacity style={styles.button}>
-                            <Text style={styles.buttonText}> Entrar </Text>
-                        </TouchableOpacity>
-            </KeyboardAvoidingView>
-        );
+    export default function Login({ navigation }) {
+        const [user, setUser] = useState('');
+        
+            function handleLogin() {
+                    navigation.navigate('Main');
+                        console.log(`User "${user}" logged.`);
+            }
+
+                return (
+                    <KeyboardAvoidingView behavior="padding" enabled={Platform.OS === 'ios'} style={styles.container}>
+                        <Image source={logo}/>
+                            <TextInput autoCapitalize="none" autoCorrect={false} placeholder="Insira seu usuário do GitHub" placeholderTextColor="#999999" style={styles.input} value={user} onChangeText={setUser}/>
+                                <TouchableOpacity onPress={handleLogin} style={styles.button}>
+                                    <Text style={styles.buttonText}> Entrar </Text>
+                                </TouchableOpacity>
+                    </KeyboardAvoidingView>
+                );
     }
 
         const styles = StyleSheet.create({
