@@ -1,24 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import Login from './pages/Login';
 
   export default function App() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.text}> Hello OmniStack 8! </Text>
-      </View>
+      <Login />
     );
   }
-
-    const styles = StyleSheet.create({
-      container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#FFFFFF'
-      },
-      text: {
-        fontWeight: 'bold',
-        color: '#7159C1',
-        fontSize: 20
-      }
-    });
