@@ -6,9 +6,12 @@ import api from '../services/api';
     export default function Login({ navigation }) {
         const [user, setUser] = useState('');
         
-            function handleLogin() {
-                    navigation.navigate('Main');
+            async function handleLogin() {
+                const response = await api.post('/devs', { username: user });
+                const { _id } = response.data;
+                    navigation.navigate('Main', { _id });
                         console.log(`User "${user}" logged.`);
+                        console.log(`User "${user}" - ID "${_id}" navigated to Main Page."`);
             }
 
                 return (
