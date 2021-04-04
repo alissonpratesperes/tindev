@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { KeyboardAvoidingView, Platform, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import logo from '../assets/logo.png';
+import api from '../services/api';
 
     export default function Login({ navigation }) {
         const [user, setUser] = useState('');
