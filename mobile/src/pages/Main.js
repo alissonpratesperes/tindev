@@ -32,10 +32,10 @@ import like from '../assets/like.png';
                         </View>
                     </View>
                     <View style={styles.buttonsContainer}>
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={[styles.button, styles.dislikeButton]}>
                             <Image source={dislike}/>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.button}>
+                        <TouchableOpacity style={[styles.button, styles.likeButton]}>
                             <Image source={like}/>
                         </TouchableOpacity>
                     </View>
@@ -60,9 +60,7 @@ import like from '../assets/like.png';
                 maxHeight: 500,
             },
             card: {
-                borderWidth: 1,
-                borderColor: '#DDDDDD',
-                borderRadius: 8,
+                borderRadius: 10,
                 margin: 30,
                 overflow: 'hidden',
                 position: 'absolute',
@@ -81,32 +79,37 @@ import like from '../assets/like.png';
                 paddingVertical: 15
             },
             name: {
-                fontSize: 16,
+                fontSize: 18,
                 fontWeight: 'bold',
                 color: '#333333'
             },
             bio: {
-                fontSize: 14,
+                fontSize: 16,
+                lineHeight: 20,
                 color: '#999999',
-                marginTop: 5,
-                lineHeight: 18
+                marginTop: 10
+                
             },
             buttonsContainer: {
                 flexDirection: 'row',
-                marginBottom: 30
+                justifyContent: 'space-between',
+                marginLeft: 30,
+                marginRight: 30,
+                marginBottom: 30,
+                alignSelf: 'stretch'
+
             },
             button: {
-                width: 50,
+                width: 150,
                 height: 50,
-                borderRadius: 25,
-                backgroundColor: '#FFFFFF',
+                borderRadius: 10,
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginHorizontal: 20,
-                elevation: 2,
-                shadowColor: '#000000',
-                shadowOpacity: 0.05,
-                shadowRadius: 2,
-                shadowOffset: { width: 0, height: 2 }
             },
+            dislikeButton: {
+                backgroundColor: 'rgba(252, 100, 100, 0.15)'
+            },
+            likeButton: {
+                backgroundColor: 'rgba(68, 236, 204, 0.15)'
+            }
         });
