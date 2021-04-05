@@ -35,27 +35,15 @@ import like from '../assets/like.png';
                             <SafeAreaView style={styles.container}>
                                 <Image style={styles.logo} source={logo}/>
                                     <View style={styles.cardsContainer}>
-                                        <View style={[styles.card, { zIndex: 3 }]}>
-                                            <Image style={styles.avatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
-                                                <View style={styles.footer}>
-                                                    <Text style={styles.name}> Alisson Prates Peres </Text>
-                                                    <Text style={styles.bio} numberOfLines={3}> Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. </Text>
-                                                </View>
-                                        </View>
-                                        <View style={[styles.card, { zIndex: 2 }]}>
-                                            <Image style={styles.avatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
-                                                <View style={styles.footer}>
-                                                    <Text style={styles.name}> Alisson Prates Peres </Text>
-                                                    <Text style={styles.bio} numberOfLines={3}> Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. </Text>
-                                                </View>
-                                        </View>
-                                        <View style={[styles.card, { zIndex: 1 }]}>
-                                            <Image style={styles.avatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
-                                                <View style={styles.footer}>
-                                                    <Text style={styles.name}> Alisson Prates Peres </Text>
-                                                    <Text style={styles.bio} numberOfLines={3}> Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. </Text>
-                                                </View>
-                                        </View>
+                                        {users.map((user, index) => (
+                                            <View key={user._id} style={[styles.card, { zIndex: users.length - index }]}>
+                                                <Image style={styles.avatar} source={{ uri: user.avatar }}/>
+                                                    <View style={styles.footer}>
+                                                        <Text style={styles.name}> {user.name} </Text>
+                                                        <Text style={styles.bio} numberOfLines={3}> {user.bio} </Text>
+                                                    </View>
+                                            </View>
+                                        ))} 
                                     </View>
                                     <View style={styles.buttonsContainer}>
                                         <TouchableOpacity style={[styles.button, styles.dislikeButton]}>
