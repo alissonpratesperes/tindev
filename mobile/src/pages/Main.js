@@ -35,15 +35,17 @@ import like from '../assets/like.png';
                             <SafeAreaView style={styles.container}>
                                 <Image style={styles.logo} source={logo}/>
                                     <View style={styles.cardsContainer}>
-                                        {users.map((user, index) => (
-                                            <View key={user._id} style={[styles.card, { zIndex: users.length - index }]}>
-                                                <Image style={styles.avatar} source={{ uri: user.avatar }}/>
-                                                    <View style={styles.footer}>
-                                                        <Text style={styles.name}> {user.name} </Text>
-                                                        <Text style={styles.bio} numberOfLines={3}> {user.bio} </Text>
-                                                    </View>
-                                            </View>
-                                        ))} 
+                                        {users.length === 0 ? <Text style={styles.empty}> 🧑🏻‍💻 Nenhum <Text style={styles.emptySpan}>dev</Text> encontrado 🤦🏻 </Text> : (
+                                            users.map((user, index) => (
+                                                <View key={user._id} style={[styles.card, { zIndex: users.length - index }]}>
+                                                    <Image style={styles.avatar} source={{ uri: user.avatar }}/>
+                                                        <View style={styles.footer}>
+                                                            <Text style={styles.name}> {user.name} </Text>
+                                                            <Text style={styles.bio} numberOfLines={3}> {user.bio} </Text>
+                                                        </View>
+                                                </View>
+                                            ))
+                                        )}
                                     </View>
                                     <View style={styles.buttonsContainer}>
                                         <TouchableOpacity style={[styles.button, styles.dislikeButton]}>
@@ -53,6 +55,7 @@ import like from '../assets/like.png';
                                             <Image source={like}/>
                                         </TouchableOpacity>
                                     </View>
+                              
                             </SafeAreaView>
                         );
     }
@@ -72,6 +75,15 @@ import like from '../assets/like.png';
                 alignSelf: 'stretch',
                 justifyContent: 'center',
                 maxHeight: 500,
+            },
+            empty: {
+                alignSelf: 'center',
+                color: '#999999',
+                fontSize: 25,
+                fontWeight: 'bold'
+            },
+            emptySpan: {
+                color: '#DF4723'
             },
             card: {
                 borderRadius: 10,
@@ -125,5 +137,5 @@ import like from '../assets/like.png';
             },
             likeButton: {
                 backgroundColor: 'rgba(68, 236, 204, 0.15)'
-            }
+            },
         });
