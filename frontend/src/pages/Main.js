@@ -15,7 +15,7 @@ import api from '../services/api';
                         console.log(response.data);
                             setUsers(response.data);
                 }
-                loadUsers();
+                    loadUsers();
             }, [match.params.id]);
 
                 async function handleDislike(id) {

@@ -1,46 +1,72 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, SafeAreaView, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import api from '../services/api';
 import logo from '../assets/logo.png';
 import dislike from '../assets/dislike.png';
 import like from '../assets/like.png';
 
-    export default function Main() {
-        return (
-            <SafeAreaView style={styles.container}>
-                <Image style={styles.logo} source={logo}/>
-                    <View style={styles.cardsContainer}>
-                        <View style={[styles.card, { zIndex: 3 }]}>
-                            <Image style={styles.avatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
-                                <View style={styles.footer}>
-                                    <Text style={styles.name}> Alisson Prates Peres </Text>
-                                    <Text style={styles.bio} numberOfLines={3}> Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. </Text>
-                                </View>
-                        </View>
-                        <View style={[styles.card, { zIndex: 2 }]}>
-                            <Image style={styles.avatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
-                                <View style={styles.footer}>
-                                    <Text style={styles.name}> Alisson Prates Peres </Text>
-                                    <Text style={styles.bio} numberOfLines={3}> Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. </Text>
-                                </View>
-                        </View>
-                        <View style={[styles.card, { zIndex: 1 }]}>
-                            <Image style={styles.avatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
-                                <View style={styles.footer}>
-                                    <Text style={styles.name}> Alisson Prates Peres </Text>
-                                    <Text style={styles.bio} numberOfLines={3}> Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. </Text>
-                                </View>
-                        </View>
-                    </View>
-                    <View style={styles.buttonsContainer}>
-                        <TouchableOpacity style={[styles.button, styles.dislikeButton]}>
-                            <Image source={dislike}/>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={[styles.button, styles.likeButton]}>
-                            <Image source={like}/>
-                        </TouchableOpacity>
-                    </View>
-            </SafeAreaView>
-        );
+    export default function Main({ navigation }) {
+        const id = navigation.getParam('user');
+        const [users, setUsers] = useState([]); 
+
+            console.log(`User "${id}" logged.`);
+
+                useEffect(() => {
+                    async function loadUsers() {
+                        const response = await api.get('/devs', { headers: { user: id } });
+                            console.log(response.data);
+                                setUsers(response.data);
+                    }
+                        loadUsers();
+                }, [id]);
+
+                    async function handleDislike(id) {
+                        await api.post(`/devs/${id}/dislikes`, null, { headers: { user: id } });
+                            console.log(`User "${id}" disliked.`);
+                                setUsers(users.filter(user => user._id !== id));
+                    }
+                    async function handleLike(id) {
+                        await api.post(`/devs/${id}/likes`, null, { headers: { user: id } });
+                            console.log(`User "${id}" liked.`);
+                                setUsers(users.filter(user => user._id !== id));
+                    }
+
+                        return (
+                            <SafeAreaView style={styles.container}>
+                                <Image style={styles.logo} source={logo}/>
+                                    <View style={styles.cardsContainer}>
+                                        <View style={[styles.card, { zIndex: 3 }]}>
+                                            <Image style={styles.avatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
+                                                <View style={styles.footer}>
+                                                    <Text style={styles.name}> Alisson Prates Peres </Text>
+                                                    <Text style={styles.bio} numberOfLines={3}> Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. </Text>
+                                                </View>
+                                        </View>
+                                        <View style={[styles.card, { zIndex: 2 }]}>
+                                            <Image style={styles.avatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
+                                                <View style={styles.footer}>
+                                                    <Text style={styles.name}> Alisson Prates Peres </Text>
+                                                    <Text style={styles.bio} numberOfLines={3}> Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. </Text>
+                                                </View>
+                                        </View>
+                                        <View style={[styles.card, { zIndex: 1 }]}>
+                                            <Image style={styles.avatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
+                                                <View style={styles.footer}>
+                                                    <Text style={styles.name}> Alisson Prates Peres </Text>
+                                                    <Text style={styles.bio} numberOfLines={3}> Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. Newbie but focused. </Text>
+                                                </View>
+                                        </View>
+                                    </View>
+                                    <View style={styles.buttonsContainer}>
+                                        <TouchableOpacity style={[styles.button, styles.dislikeButton]}>
+                                            <Image source={dislike}/>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity style={[styles.button, styles.likeButton]}>
+                                            <Image source={like}/>
+                                        </TouchableOpacity>
+                                    </View>
+                            </SafeAreaView>
+                        );
     }
 
         const styles = StyleSheet.create({
