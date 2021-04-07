@@ -56,15 +56,16 @@ import like from '../assets/like.png';
                                             ))
                                         )}
                                     </View>
-                                    <View style={styles.buttonsContainer}>
-                                        <TouchableOpacity style={[styles.button, styles.dislikeButton]} onPress={handleDislike}>
-                                            <Image source={dislike}/>
-                                        </TouchableOpacity>
-                                        <TouchableOpacity style={[styles.button, styles.likeButton]} onPress={handleLike}>
-                                            <Image source={like}/>
-                                        </TouchableOpacity>
-                                    </View>
-                              
+                                        {users.length > 0 && (
+                                            <View style={styles.buttonsContainer}>
+                                                <TouchableOpacity style={[styles.button, styles.dislikeButton]} onPress={handleDislike}>
+                                                    <Image source={dislike}/>
+                                                </TouchableOpacity>
+                                                <TouchableOpacity style={[styles.button, styles.likeButton]} onPress={handleLike}>
+                                                    <Image source={like}/>
+                                                </TouchableOpacity>
+                                            </View>
+                                        ) }
                             </SafeAreaView>
                         );
     }
@@ -83,7 +84,7 @@ import like from '../assets/like.png';
                 flex: 1,
                 alignSelf: 'stretch',
                 justifyContent: 'center',
-                maxHeight: 500,
+                maxHeight: 500
             },
             empty: {
                 alignSelf: 'center',
