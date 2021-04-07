@@ -21,15 +21,17 @@ import like from '../assets/like.png';
                         loadUsers();
                 }, [id]);
 
-                    async function handleDislike(id) {
-                        await api.post(`/devs/${id}/dislikes`, null, { headers: { user: id } });
-                            console.log(`User "${id}" disliked.`);
-                                setUsers(users.filter(user => user._id !== id));
+                    async function handleDislike() {
+                        const [user, ...rest] = users;
+                            await api.post(`/devs/${user._id}/dislikes`, null, { headers: { user: id } });
+                                console.log(`User "${user._id}" disliked.`);
+                                    setUsers(rest);
                     }
-                    async function handleLike(id) {
-                        await api.post(`/devs/${id}/likes`, null, { headers: { user: id } });
-                            console.log(`User "${id}" liked.`);
-                                setUsers(users.filter(user => user._id !== id));
+                    async function handleLike() {
+                        const [ user, ...rest ] = users;
+                            await api.post(`/devs/${user._id}/likes`, null, { headers: { user: id } });
+                                console.log(`User "${user._id}" liked.`);
+                                    setUsers(rest);
                     }
                     async function handleLogout() {
                         await AsyncStorage.clear();
@@ -55,10 +57,10 @@ import like from '../assets/like.png';
                                         )}
                                     </View>
                                     <View style={styles.buttonsContainer}>
-                                        <TouchableOpacity style={[styles.button, styles.dislikeButton]}>
+                                        <TouchableOpacity style={[styles.button, styles.dislikeButton]} onPress={handleDislike}>
                                             <Image source={dislike}/>
                                         </TouchableOpacity>
-                                        <TouchableOpacity style={[styles.button, styles.likeButton]}>
+                                        <TouchableOpacity style={[styles.button, styles.likeButton]} onPress={handleLike}>
                                             <Image source={like}/>
                                         </TouchableOpacity>
                                     </View>
