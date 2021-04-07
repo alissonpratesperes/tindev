@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AsyncStorage from '@react-native-community/async-storage';
 import { View, SafeAreaView, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import api from '../services/api';
 import logo from '../assets/logo.png';
@@ -30,12 +31,18 @@ import like from '../assets/like.png';
                             console.log(`User "${id}" liked.`);
                                 setUsers(users.filter(user => user._id !== id));
                     }
+                    async function handleLogout() {
+                        await AsyncStorage.clear();
+                            navigation.navigate('Login');
+                    }
 
                         return (
                             <SafeAreaView style={styles.container}>
-                                <Image style={styles.logo} source={logo}/>
+                                <TouchableOpacity onPress={handleLogout}>
+                                    <Image style={styles.logo} source={logo}/>
+                                </TouchableOpacity>
                                     <View style={styles.cardsContainer}>
-                                        {users.length === 0 ? <Text style={styles.empty}> 🧑🏻‍💻 Nenhum <Text style={styles.emptySpan}>dev</Text> encontrado 🤦🏻 </Text> : (
+                                        {users.length === 0 ? <Text style={styles.empty}> 🧑🏻‍💻 Nenhum <Text style={styles.emptySpan}>dev</Text> encontrado 🤦🏻‍♂️ </Text> : (
                                             users.map((user, index) => (
                                                 <View key={user._id} style={[styles.card, { zIndex: users.length - index }]}>
                                                     <Image style={styles.avatar} source={{ uri: user.avatar }}/>
