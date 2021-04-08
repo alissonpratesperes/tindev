@@ -20,6 +20,11 @@ import api from '../services/api';
             }, [match.params.id]);
             useEffect(() => {
                 const socket = io('http://localhost:3333');
+                    setTimeout(() => {
+                        socket.emit('hello', {
+                            message: 'Hello World'
+                        });
+                    }, 3000);
             }, [match.params.id]);
 
                 async function handleDislike(id) {
