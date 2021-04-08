@@ -9,14 +9,7 @@ const io = require('socket.io')(server, options);
 
     io.on('connection', socket => {
         console.log('Nova conexão:', socket.id);
-            socket.on('hello', message => {
-                console.log(message);
-            });
-                setTimeout(() => {
-                    socket.emit('world', {
-                        message: 'OmniStack'
-                    });
-                }, 5000);
+        
     });
 
         mongoose.connect('mongodb+srv://omnistack_dev:KcAtSiNm0O@mavericks.pwlbv.mongodb.net/omnistack8?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
