@@ -16,6 +16,7 @@ const connectedUsers = {};
 
         mongoose.connect('mongodb+srv://omnistack_dev:KcAtSiNm0O@mavericks.pwlbv.mongodb.net/omnistack8?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
+            app.use((request, response, next) => { request.io = io; request.connectedUsers = connectedUsers; return next(); });
             app.use(cors());
             app.use(express.json());
             app.use(routes);
