@@ -19,7 +19,9 @@ import api from '../services/api';
                     loadUsers();
             }, [match.params.id]);
             useEffect(() => {
-                const socket = io('http://localhost:3333');
+                const socket = io('http://localhost:3333', {
+                    query: { user: match.params.id }
+                });
             }, [match.params.id]);
 
                 async function handleDislike(id) {

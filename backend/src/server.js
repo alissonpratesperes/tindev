@@ -6,10 +6,12 @@ const app = express();
 const server = require('http').Server(app);
 const options = {cors: true, origins: ['*:*']};
 const io = require('socket.io')(server, options);
+const connectedUsers = {};
 
     io.on('connection', socket => {
-        console.log('Nova conexão:', socket.id);
-        
+        const { user } = socket.handshake.query;
+            connectedUsers[user] = socket.id;
+                console.log(`User "${user}" logged through Socket "${socket.id}"`);
     });
 
         mongoose.connect('mongodb+srv://omnistack_dev:KcAtSiNm0O@mavericks.pwlbv.mongodb.net/omnistack8?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
