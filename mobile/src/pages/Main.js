@@ -24,13 +24,8 @@ import itsamatch from '../assets/itsamatch.png';
                         loadUsers();
                 }, [id]);
                 useEffect(() => {
-                    const socket = io('http://192.168.0.102:3333', {
-                        query: { user: id }
-                    });
-                        socket.on('match', dev => {
-                            setMatchDev(dev);
-                                console.log(dev);
-                        });
+                    const socket = io('http://192.168.0.102:3333', { query: { user: id } });
+                        socket.on('match', dev => { setMatchDev(dev); console.log(dev); });
                 }, [id]);
 
                     async function handleDislike() {
@@ -94,128 +89,25 @@ import itsamatch from '../assets/itsamatch.png';
     }
 
         const styles = StyleSheet.create({
-            container: {
-                flex: 1,
-                backgroundColor: '#F5F5F5',
-                alignItems: 'center',
-                justifyContent: 'space-between'
-            },
-            logo: {
-                marginTop: 30
-            },
-            cardsContainer: {
-                flex: 1,
-                alignSelf: 'stretch',
-                justifyContent: 'center',
-                maxHeight: 500
-            },
-            empty: {
-                alignSelf: 'center',
-                color: '#999999',
-                fontSize: 25,
-                fontWeight: 'bold'
-            },
-            emptySpan: {
-                color: '#DF4723'
-            },
-            card: {
-                borderRadius: 10,
-                margin: 30,
-                overflow: 'hidden',
-                position: 'absolute',
-                left: 0,
-                top: 0,
-                right: 0,
-                bottom: 0
-            },
-            avatar: {
-                flex: 1,
-                height: 300
-            },
-            footer: {
-                backgroundColor: '#FFFFFF',
-                paddingHorizontal: 20,
-                paddingVertical: 15
-            },
-            name: {
-                fontSize: 18,
-                fontWeight: 'bold',
-                color: '#333333'
-            },
-            bio: {
-                fontSize: 16,
-                lineHeight: 20,
-                color: '#999999',
-                marginTop: 10
-                
-            },
-            buttonsContainer: {
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                marginLeft: 30,
-                marginRight: 30,
-                marginBottom: 30,
-                alignSelf: 'stretch'
-
-            },
-            button: {
-                width: 150,
-                height: 50,
-                borderRadius: 10,
-                justifyContent: 'center',
-                alignItems: 'center',
-            },
-            dislikeButton: {
-                backgroundColor: 'rgba(252, 100, 100, 0.15)'
-            },
-            likeButton: {
-                backgroundColor: 'rgba(68, 236, 204, 0.15)'
-            },
-            matchContainer: {
-                ... StyleSheet.absoluteFillObject,
-                backgroundColor: 'rgba(0, 0, 0, 0.9)',
-                justifyContent: 'center',
-                alignItems: 'center'
-            },
-            matchImage: {
-                height: 70,
-                resizeMode: 'contain'
-            },
-            matchAvatar: {
-                height: 200,
-                width: 200,
-                borderRadius: 100,
-                borderWidth: 3,
-                borderColor: '#DF4723',
-                marginVertical: 30,
-            },
-            matchName: {
-                fontSize: 30,
-                fontWeight: 'bold',
-                color: '#FFFFFF'
-            },
-            matchBio: {
-                marginTop: 15,
-                fontSize: 20,
-                lineHeight: 30,
-                color: 'rgba(255, 255, 255, 0.8)',
-                textAlign: 'center',
-                paddingHorizontal: 30
-            },
-            touchableMatch: {
-                marginTop: 30,
-                height: 50,
-                width: 125,
-                backgroundColor: 'rgba(223, 71, 35, 1)',
-                borderRadius: 10,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-            },
-            closeMatch: {
-                fontSize: 16,
-                color: 'rgba(255, 255, 255, 0.8)',
-                textTransform: 'uppercase',
-                fontWeight: 'bold'
-            }
+            container: { flex: 1, backgroundColor: '#F5F5F5', alignItems: 'center', justifyContent: 'space-between' },
+            logo: { marginTop: 30 },
+            cardsContainer: { flex: 1, alignSelf: 'stretch', justifyContent: 'center', maxHeight: 500 },
+            empty: { alignSelf: 'center', color: '#999999', fontSize: 25, fontWeight: 'bold' },
+            emptySpan: { color: '#DF4723' },
+            card: { borderRadius: 10, margin: 30, overflow: 'hidden', position: 'absolute', left: 0, top: 0, right: 0, bottom: 0 },
+            avatar: { flex: 1, height: 300 },
+            footer: { backgroundColor: '#FFFFFF', paddingHorizontal: 20, paddingVertical: 15 },
+            name: { fontSize: 18, fontWeight: 'bold', color: '#333333' },
+            bio: { fontSize: 16, lineHeight: 20, color: '#999999', marginTop: 10 },
+            buttonsContainer: { flexDirection: 'row', justifyContent: 'space-between', marginLeft: 30, marginRight: 30, marginBottom: 30, alignSelf: 'stretch' },
+            button: { width: 150, height: 50, borderRadius: 10, justifyContent: 'center', alignItems: 'center' },
+            dislikeButton: { backgroundColor: 'rgba(252, 100, 100, 0.15)' },
+            likeButton: { backgroundColor: 'rgba(68, 236, 204, 0.15)' },
+            matchContainer: { ... StyleSheet.absoluteFillObject, backgroundColor: 'rgba(0, 0, 0, 0.9)', justifyContent: 'center', alignItems: 'center' },
+            matchImage: { height: 70, resizeMode: 'contain' },
+            matchAvatar: { height: 200, width: 200, borderRadius: 100, borderWidth: 3, borderColor: '#DF4723', marginVertical: 30, },
+            matchName: { fontSize: 30, fontWeight: 'bold', color: '#FFFFFF' },
+            matchBio: { marginTop: 15, fontSize: 20, lineHeight: 30, color: 'rgba(255, 255, 255, 0.8)', textAlign: 'center', paddingHorizontal: 30 },
+            touchableMatch: { marginTop: 30, height: 50, width: 125, backgroundColor: 'rgba(223, 71, 35, 1)', borderRadius: 10, display: 'flex', justifyContent: 'center', alignItems: 'center' },
+            closeMatch: { fontSize: 16, color: 'rgba(255, 255, 255, 0.8)', textTransform: 'uppercase', fontWeight: 'bold' }
         });
