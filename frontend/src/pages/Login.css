@@ -18,18 +18,12 @@ div.login-container form img {
 
 div.login-container form input {
     margin-top: 20px;
-    border: 1px solid #DDDDDD;
+    border: none;
     border-radius: 10px;
     height: 50px;
     padding: 0px 20px;
     font-size: 20px;
     color: #666666;
-    transition: 0.2s ease-in-out;
-    transition-property: border;
-}
-
-div.login-container form input:focus {
-    border: 1px solid #666666;
 }
 
 div.login-container form input::placeholder {

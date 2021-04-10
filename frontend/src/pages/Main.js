@@ -21,13 +21,8 @@ import api from '../services/api';
                     loadUsers();
             }, [match.params.id]);
             useEffect(() => {
-                const socket = io('http://localhost:3333', {
-                    query: { user: match.params.id }
-                });
-                    socket.on('match', dev => {
-                        setMatchDev(dev);
-                            console.log(dev);
-                    });
+                const socket = io('http://localhost:3333', { query: { user: match.params.id } });
+                    socket.on('match', dev => { setMatchDev(dev); console.log(dev); });
             }, [match.params.id]);
 
                 async function handleDislike(id) {
@@ -43,9 +38,7 @@ import api from '../services/api';
 
                     return (
                         <div className="main-container">
-                            <Link to="/">
-                                <img src={logo} className="mainLogo" alt="tindev"/>
-                            </Link>
+                            <Link to="/"> <img src={logo} className="mainLogo" alt="tindev"/> </Link>
                                 {users.length > 0 ? (
                                     <ul>
                                         {users.map(user => (
