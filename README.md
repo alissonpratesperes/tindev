@@ -21,3 +21,7 @@
 </p>
 <br/>
 <p align="center"> <img src="github/tindev_dashboard.png" width="100%"> </p>
+
+## :dart: Sobre
+
+O **tindev** é um projeto que visa conectar Desenvolvedores do GitHub que desejam fazer um PairProgramming juntos através do Match entre eles.
