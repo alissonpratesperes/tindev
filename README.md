@@ -24,4 +24,14 @@
 
 ## :dart: Sobre
 
-O **tindev** é um projeto que visa conectar Desenvolvedores do GitHub que desejam fazer um PairProgramming juntos através do Match entre eles.
+O **tindev** é um projeto que visa conectar Desenvolvedores do GitHub que desejam fazer PairProgramming através do Match entre eles.
+
+## :battery: Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- <a href="https://nodejs.org/en">NodeJS</a>
+- <a href="https://www.mongodb.com/">MongoDB</a>
+- <a href="https://reactjs.org/">ReactJS</a>
+- <a href="https://reactnative.dev/">React Native</a>
+- <a href="https://expo.io/">Expo</a>
