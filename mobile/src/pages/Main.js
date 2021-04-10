@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import io from 'socket.io-client';
 import AsyncStorage from '@react-native-community/async-storage';
 import { View, SafeAreaView, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import api from '../services/api';
@@ -8,7 +9,7 @@ import like from '../assets/like.png';
 
     export default function Main({ navigation }) {
         const id = navigation.getParam('user');
-        const [users, setUsers] = useState([]); 
+        const [users, setUsers] = useState([]);
 
             console.log(`User "${id}" logged.`);
 
