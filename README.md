@@ -11,7 +11,6 @@
 <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/alissonpratesperes/tindev?color=DF4723"></a>
 <a href ="https://github.com/alissonpratesperes/tindev/blob/main/LICENSE"> <img alt="GitHub License" src="https://img.shields.io/badge/license-MIT-DF4723"> </a>
 </p>
-<p align="center"> <img src="github/tindev_dashboard.png" width="100%"> </p>
 <br/>
 <p align="center">
 <a href="#dart-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -21,3 +20,4 @@
 <a href="#memo-licença">Licença</a>
 </p>
 <br/>
+<p align="center"> <img src="github/tindev_dashboard.png" width="100%"> </p>
