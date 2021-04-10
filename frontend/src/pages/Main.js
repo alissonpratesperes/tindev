@@ -65,12 +65,14 @@ import api from '../services/api';
                                     <div className="empty"> 🧑🏻‍💻 Nenhum <span className="emptySpan">dev</span> encontrado 🤦🏻 </div>
                                 )}
                                 {matchDev && (
-                                    <div className="match-container">
-                                        <img src={itsamatch} alt="It's a Match!"/>
-                                        <img className="avatar" src="https://avatars.githubusercontent.com/u/52282116?v=4" alt="Alisson Prates Peres"/>
-                                            <strong> Alisson Prates Peres </strong>
-                                                <p> Newbie but focused. </p>
-                                                    <button type="button" onClick={() => setMatchDev(null)}> Fechar </button>
+                                    <div className="blurred-background">
+                                        <div className="match-container">
+                                            <img src={itsamatch} alt="It's a Match!"/>
+                                            <img className="avatar" src="https://avatars.githubusercontent.com/u/52282116?v=4" alt="Alisson Prates Peres"/>
+                                                <strong> Alisson Prates Peres </strong>
+                                                    <p> Newbie but focused. </p>
+                                                        <button type="button" onClick={() => setMatchDev(null)}> Voltar </button>
+                                        </div>
                                     </div>
                                 )}
                         </div>

@@ -93,6 +93,16 @@ div.main-container div.empty span.emptySpan {
     color: #DF4723;
 }
 
+div.blurred-background {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
 div.match-container {
     position: absolute;
     top: 0px;
@@ -102,37 +112,49 @@ div.match-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;    
 }
 
 div.match-container img.avatar {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: 5px solid #FFFFFF;
+    border: 3px solid #DF4723;
     margin: 30px 0px;
+    padding: 6px;
 }
 
 div.match-container strong {
-    font-size: 32px;
+    font-size: 30px;
     color: #FFFFFF;
 }
 
 div.match-container p {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 20px;
     line-height: 30px;
-    max-width: 400px;
+    max-width: 500px;
     color: rgba(255, 255, 255, 0.8);
 }
 
 div.match-container button {
     border: 0px;
     background: none;
+    height: 50px;
+    width: 125px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(223, 71, 35, 1);
+    border-radius: 10px 10px 10px 10px;
+    font-size: 16px;
+    text-transform: uppercase;
     margin-top: 30px;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+    transition-property: opacity;
     cursor: pointer;
+}
+
+div.match-container button:hover {
+    opacity: 1;
 }
