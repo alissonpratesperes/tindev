@@ -6,6 +6,7 @@ import api from '../services/api';
 import logo from '../assets/logo.png';
 import dislike from '../assets/dislike.png';
 import like from '../assets/like.png';
+import itsamatch from '../assets/itsamatch.png';
 
     export default function Main({ navigation }) {
         const id = navigation.getParam('user');
@@ -77,6 +78,17 @@ import like from '../assets/like.png';
                                                 </TouchableOpacity>
                                             </View>
                                         ) }
+                                        {matchDev && (
+                                            <View style={styles.matchContainer}>
+                                                <Image style={styles.matchImage} source={itsamatch}/>
+                                                <Image style={styles.matchAvatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
+                                                    <Text style={styles.matchName}> Alisson Prates Peres </Text>
+                                                    <Text style={styles.matchBio}> Newbie but focused. </Text>
+                                                        <TouchableOpacity onPress={() => setMatchDev(null)}>
+                                                            <Text style={styles.closeMatch}> Fechar </Text>
+                                                        </TouchableOpacity>
+                                            </View>
+                                        )}
                             </SafeAreaView>
                         );
     }
@@ -159,4 +171,42 @@ import like from '../assets/like.png';
             likeButton: {
                 backgroundColor: 'rgba(68, 236, 204, 0.15)'
             },
+            matchContainer: {
+                ... StyleSheet.absoluteFillObject,
+                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                justifyContent: 'center',
+                alignItems: 'center'
+            },
+            matchImage:{
+                height: 60,
+                resizeMode: 'contain'
+            },
+            matchAvatar:{
+                height: 160,
+                width: 160,
+                borderRadius: 80,
+                borderWidth: 5,
+                borderColor: '#FFFFFF',
+                marginVertical: 30
+            },
+            matchName: {
+                fontSize: 26,
+                fontWeight: 'bold',
+                color: '#FFFFFF'
+            },
+            matchBio: {
+                marginTop: 10,
+                fontSize: 16,
+                color: 'rgba(255, 255, 255, 0.8)',
+                lineHeight: 24,
+                textAlign: 'center',
+                paddingHorizontal: 30
+            },
+            closeMatch: {
+                fontSize: 16,
+                color: 'rgba(255, 255, 255, 0.8)',
+                textAlign: 'center',
+                marginTop: 30,
+                fontWeight: 'bold'
+            }
         });
