@@ -55,3 +55,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## :memo: Licença
 
 Esse projeto está sob a **Licença MIT**. Veja o arquivo [LICENSE](https://github.com/alissonpratesperes/tindev/blob/main/LICENSE) para mais detalhes.
+
+---
+
+<h5 align="center">  ✍🏻&nbsp; &nbsp;na &nbsp;👋🏻&nbsp;  por <a href="https://github.com/alissonpratesperes"> Alisson Prates Peres </a> &nbsp;👨🏻‍💻 </h5>
