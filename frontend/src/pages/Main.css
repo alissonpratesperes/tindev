@@ -126,6 +126,7 @@ div.match-container img.avatar {
 
 div.match-container strong {
     font-size: 30px;
+    font-weight: 'bold';
     color: #FFFFFF;
 }
 

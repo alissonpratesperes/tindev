@@ -83,8 +83,8 @@ import itsamatch from '../assets/itsamatch.png';
                                                 <Image style={styles.matchImage} source={itsamatch}/>
                                                 <Image style={styles.matchAvatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
                                                     <Text style={styles.matchName}> Alisson Prates Peres </Text>
-                                                    <Text style={styles.matchBio}> Newbie but focused. </Text>
-                                                        <TouchableOpacity onPress={() => setMatchDev(null)}>
+                                                    <Text style={styles.matchBio}> An instructor focused on helping people start programming for web - #html #css #javascript #sql #react #nodejs #fullstack </Text>
+                                                        <TouchableOpacity style={styles.touchableMatch} onPress={() => setMatchDev(null)}>
                                                             <Text style={styles.closeMatch}> Fechar </Text>
                                                         </TouchableOpacity>
                                             </View>
@@ -173,40 +173,49 @@ import itsamatch from '../assets/itsamatch.png';
             },
             matchContainer: {
                 ... StyleSheet.absoluteFillObject,
-                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                backgroundColor: 'rgba(0, 0, 0, 0.9)',
                 justifyContent: 'center',
                 alignItems: 'center'
             },
-            matchImage:{
-                height: 60,
+            matchImage: {
+                height: 70,
                 resizeMode: 'contain'
             },
-            matchAvatar:{
-                height: 160,
-                width: 160,
-                borderRadius: 80,
-                borderWidth: 5,
-                borderColor: '#FFFFFF',
-                marginVertical: 30
+            matchAvatar: {
+                height: 200,
+                width: 200,
+                borderRadius: 100,
+                borderWidth: 3,
+                borderColor: '#DF4723',
+                marginVertical: 30,
             },
             matchName: {
-                fontSize: 26,
+                fontSize: 30,
                 fontWeight: 'bold',
                 color: '#FFFFFF'
             },
             matchBio: {
-                marginTop: 10,
-                fontSize: 16,
+                marginTop: 15,
+                fontSize: 20,
+                lineHeight: 30,
                 color: 'rgba(255, 255, 255, 0.8)',
-                lineHeight: 24,
                 textAlign: 'center',
                 paddingHorizontal: 30
+            },
+            touchableMatch: {
+                marginTop: 30,
+                height: 50,
+                width: 125,
+                backgroundColor: 'rgba(223, 71, 35, 1)',
+                borderRadius: 10,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center'
             },
             closeMatch: {
                 fontSize: 16,
                 color: 'rgba(255, 255, 255, 0.8)',
-                textAlign: 'center',
-                marginTop: 30,
+                textTransform: 'uppercase',
                 fontWeight: 'bold'
             }
         });
