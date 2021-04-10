@@ -45,3 +45,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Execute o *FrontEnd:* **cd . . > enter > cd frontend > npm/yarn install > enter > concluído? > code .**. No *VS Code* acesse o arquivo **src/services/api.js** e configure o **IP da API**; Rode o *FrontEnd* com o comando **npm/yarn start**;
 
 - Execute o *Mobile:* **cd . . > enter > cd mobile > npm/yarn install > enter > concluído? > code .**. No *VS Code* acesse o arquivo **src/services/api.js** e configure o **IP da API**; Acesse o arquivo **src/pages/Main.js** e configure o **IP dos WebSockets** na **Linha 27**. Rode o *Mobile* com o comando **expo start**.
+
+## :fuelpump: Autor
+
+- Projeto desenvolvido durante a **Semana OmniStack 8** da <a href="https://rocketseat.com.br/">Rocketseat</a>, ocorrida em **Agosto de 2019**;
+
+- Acesse  <a href="https://github.com/rocketseat-education/semana-omnistack-8">aqui</a> o **repositório oficial** da aplicação.
