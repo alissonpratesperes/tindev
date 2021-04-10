@@ -11,7 +11,7 @@ import itsamatch from '../assets/itsamatch.png';
     export default function Main({ navigation }) {
         const id = navigation.getParam('user');
         const [users, setUsers] = useState([]);
-        const [matchDev, setMatchDev] = useState(true);
+        const [matchDev, setMatchDev] = useState(null);
 
             console.log(`User "${id}" logged.`);
 
@@ -81,11 +81,11 @@ import itsamatch from '../assets/itsamatch.png';
                                         {matchDev && (
                                             <View style={styles.matchContainer}>
                                                 <Image style={styles.matchImage} source={itsamatch}/>
-                                                <Image style={styles.matchAvatar} source={{ uri: 'https://avatars.githubusercontent.com/u/52282116?v=4' }}/>
-                                                    <Text style={styles.matchName}> Alisson Prates Peres </Text>
-                                                    <Text style={styles.matchBio}> An instructor focused on helping people start programming for web - #html #css #javascript #sql #react #nodejs #fullstack </Text>
+                                                <Image style={styles.matchAvatar} source={{ uri: matchDev.avatar }}/>
+                                                    <Text style={styles.matchName}> {matchDev.name} </Text>
+                                                    <Text style={styles.matchBio}> {matchDev.bio} </Text>
                                                         <TouchableOpacity style={styles.touchableMatch} onPress={() => setMatchDev(null)}>
-                                                            <Text style={styles.closeMatch}> Fechar </Text>
+                                                            <Text style={styles.closeMatch}> Voltar </Text>
                                                         </TouchableOpacity>
                                             </View>
                                         )}
