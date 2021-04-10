@@ -10,6 +10,7 @@ import like from '../assets/like.png';
     export default function Main({ navigation }) {
         const id = navigation.getParam('user');
         const [users, setUsers] = useState([]);
+        const [matchDev, setMatchDev] = useState(true);
 
             console.log(`User "${id}" logged.`);
 
@@ -20,6 +21,15 @@ import like from '../assets/like.png';
                                 setUsers(response.data);
                     }
                         loadUsers();
+                }, [id]);
+                useEffect(() => {
+                    const socket = io('http://192.168.0.102:3333', {
+                        query: { user: id }
+                    });
+                        socket.on('match', dev => {
+                            setMatchDev(dev);
+                                console.log(dev);
+                        });
                 }, [id]);
 
                     async function handleDislike() {
