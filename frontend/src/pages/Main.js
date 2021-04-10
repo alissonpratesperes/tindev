@@ -10,7 +10,7 @@ import api from '../services/api';
 
     function Main({ match }) {
         const [users, setUsers] = useState([]);
-        const [matchDev, setMatchDev] = useState(true);
+        const [matchDev, setMatchDev] = useState(null);
 
             useEffect(() => {
                 async function loadUsers() {
@@ -25,7 +25,8 @@ import api from '../services/api';
                     query: { user: match.params.id }
                 });
                     socket.on('match', dev => {
-                        console.log(dev);
+                        setMatchDev(dev);
+                            console.log(dev);
                     });
             }, [match.params.id]);
 
@@ -68,9 +69,9 @@ import api from '../services/api';
                                     <div className="blurred-background">
                                         <div className="match-container">
                                             <img src={itsamatch} alt="It's a Match!"/>
-                                            <img className="avatar" src="https://avatars.githubusercontent.com/u/52282116?v=4" alt="Alisson Prates Peres"/>
-                                                <strong> Alisson Prates Peres </strong>
-                                                    <p> Newbie but focused. </p>
+                                            <img className="avatar" src={matchDev.avatar} alt={matchDev.name}/>
+                                                <strong> {matchDev.name} </strong>
+                                                    <p> {matchDev.bio} </p>
                                                         <button type="button" onClick={() => setMatchDev(null)}> Voltar </button>
                                         </div>
                                     </div>
