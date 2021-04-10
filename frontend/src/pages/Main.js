@@ -5,10 +5,12 @@ import './Main.css';
 import logo from '../assets/logo.svg';
 import dislike from '../assets/dislike.svg';
 import like from '../assets/like.svg';
+import itsamatch from '../assets/itsamatch.png';
 import api from '../services/api';
 
     function Main({ match }) {
         const [users, setUsers] = useState([]);
+        const [matchDev, setMatchDev] = useState(true);
 
             useEffect(() => {
                 async function loadUsers() {
@@ -61,6 +63,15 @@ import api from '../services/api';
                                     </ul>
                                 ) : (
                                     <div className="empty"> 🧑🏻‍💻 Nenhum <span className="emptySpan">dev</span> encontrado 🤦🏻 </div>
+                                )}
+                                {matchDev && (
+                                    <div className="match-container">
+                                        <img src={itsamatch} alt="It's a Match!"/>
+                                        <img className="avatar" src="https://avatars.githubusercontent.com/u/52282116?v=4" alt="Alisson Prates Peres"/>
+                                            <strong> Alisson Prates Peres </strong>
+                                                <p> Newbie but focused. </p>
+                                                    <button type="button" onClick={() => setMatchDev(null)}> Fechar </button>
+                                    </div>
                                 )}
                         </div>
                     );

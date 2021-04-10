@@ -92,3 +92,47 @@ div.main-container div.empty {
 div.main-container div.empty span.emptySpan {
     color: #DF4723;
 }
+
+div.match-container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+div.match-container img.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #FFFFFF;
+    margin: 30px 0px;
+}
+
+div.match-container strong {
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+div.match-container p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 400px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+div.match-container button {
+    border: 0px;
+    background: none;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    margin-top: 30px;
+    cursor: pointer;
+}
