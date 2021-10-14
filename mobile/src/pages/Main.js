@@ -24,7 +24,7 @@ import itsamatch from '../assets/itsamatch.png';
                         loadUsers();
                 }, [id]);
                 useEffect(() => {
-                    const socket = io('http://192.168.0.102:3333', { query: { user: id } });
+                    const socket = io('http://192.168.0.101:3333', { query: { user: id } });
                         socket.on('match', dev => { setMatchDev(dev); console.log(dev); });
                 }, [id]);
 
