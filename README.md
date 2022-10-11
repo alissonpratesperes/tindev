@@ -25,7 +25,7 @@
 <p align="center"> <img src="github/tindev_dashboard.png" width="100%"> </p>
 
 ## :dart: Sobre
-A **Tindev** é uma Aplicação que visa conectar Desenvolvedores do GitHub que desejam fazer PairProgramming através do Match entre eles.
+A **tindev** é uma Aplicação que visa conectar Desenvolvedores do GitHub que desejam fazer PairProgramming através do Match entre eles.
 
 ## :battery: Tecnologias
 Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
@@ -38,3 +38,13 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
 - <a href="https://axios-http.com/">Axios</a>
 - <a href="https://expo.dev/">Expo IO</a>
 - <a href="https://reactnative.dev/">React Native</a>
+
+## :fuelpump: Autor
+
+Projeto desenvolvido durante a **Semana OmniStack 8** da <a href="https://rocketseat.com.br/">Rocketseat</a>, ocorrida em **Agosto de 2019**;
+
+Acesse  <a href="https://github.com/rocketseat-education/semana-omnistack-8">aqui</a> o **repositório oficial** da aplicação.
+
+## :memo: Licença
+
+Esse projeto está sob a **Licença MIT**. Veja o arquivo [LICENSE](https://github.com/alissonpratesperes/tindev/blob/main/LICENSE) para mais detalhes.
