@@ -55,7 +55,7 @@ A **tindev** é uma Aplicação que visa conectar Desenvolvedores que estão no 
         |- Acessar o arquivo: "./frontend/src/services/api.js:3" e atualizar o Endereço de Conexão do Front-End
             >_ Inicializar o Front-End com o Comando: "npm start"
     - Acessar o Mobile: "./mobile"
-      	|- Instalar as dependências com o Comando: "npm install --force"
+        |- Instalar as dependências com o Comando: "npm install --force"
         |- Acessar o arquivo: "./mobile/src/pages/Main.js:27" e atualizar o Endereço de Conexão dos WebSockets
         |- Acessar o arquivo: "./mobile/src/services/api.js:3" e atualizar o Endereço de Conexão do Mobile
             >_ Inicializar o Mobile com o Comando: "expo start"
