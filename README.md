@@ -74,7 +74,7 @@ A **tindev** é uma Aplicação inspirada no Tinder, que visa conectar Desenvolv
 
 ## EXECUTE
 
-    - Clonar o Repositório
+    - Clonar este repositório
     - Acessar o Back-End: "./backend"
 	    |- Instalar as dependências com o Comando: "npm install --force"
         |- Acessar o arquivo: "./backend/src/server.js:17" e verificar URL de Conexão com o Banco de Dados
