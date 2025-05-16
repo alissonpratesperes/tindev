@@ -94,7 +94,7 @@ A **tindev** é uma Aplicação inspirada no Tinder, que visa conectar Desenvolv
 
 Projeto desenvolvido durante a **Omni Stack Week 08** da <a href="https://rocketseat.com.br/">Rocketseat</a> ocorrida em **Agosto de 2019**
 
-Acesse <a href="https://github.com/rocketseat-education/semana-omnistack-8">aqui</a> o **repositório oficial**  da aplicação
+Acesse <a href="https://github.com/rocketseat-education/semana-omnistack-8">aqui</a> o **repositório oficial** da aplicação
 
 ## LICENÇA
 
