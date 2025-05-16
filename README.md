@@ -1,5 +1,5 @@
 ﻿<p align="center">
-  <img src="./github/tindev-logo.svg" alt="tindev-logo" width="30%"/>
+  <img src="./github/tindev-logo.svg" alt="tindev-logo" width="50%"/>
 </p>
 
 ___
@@ -17,22 +17,60 @@ ___
 </p>
 
 ## SOBRE
-
-A **tindev** é uma Aplicação que visa conectar Desenvolvedores que estão no GitHub e que desejam fazer pair programming através do Match entre eles
+A **tindev** é uma Aplicação inspirada no Tinder, que visa conectar Desenvolvedores que estão no GitHub e que desejam fazer pair programming através do Match entre eles.
 
 ## TECNOLOGIA
 
-TOOLING | <a href="https://insomnia.rest/">Insomnia</a> • <a href="https://expo.dev/">Expo IO</a>
+<details>
+  <summary><strong>Tooling</strong></summary>
 
-DATABASE | <a href="https://mongodb.com/">MongoDB</a>
+  <ul>
+    <li><a href="https://insomnia.rest/">Insomnia</a></li>
+    <li><a href="https://expo.dev/">Expo IO</a></li>
+  </ul>
+</details>
 
-INTEGRATION | <a href="https://expressjs.com/">Express</a> • <a href="https://axios-http.com/">Axios</a> • <a href="https://socket.io/">Socket IO</a>
+<details>
+  <summary><strong>Database</strong></summary>
 
-BACK-END | <a href="https://nodejs.org/">NodeJS</a>
+  <ul>
+    <li><a href="https://mongodb.com/">Mongo DB</a></li>
+  </ul>
+</details>
 
-FRONT-END | <a href="https://reactjs.org/">ReactJS</a>
+<details>
+  <summary><strong>Integration</strong></summary>
 
-MOBILE | <a href="https://reactnative.dev/">React Native</a>
+  <ul>
+    <li><a href="https://socket.io/">Socket IO</a></li>
+    <li><a href="https://expressjs.com/">Express</a></li>
+    <li><a href="https://axios-http.com/">Axios</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary><strong>Back-End</strong></summary>
+
+  <ul>
+    <li><a href="https://nodejs.org/">Node JS</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary><strong>Front-End</strong></summary>
+
+  <ul>
+    <li><a href="https://reactjs.org/">React JS</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary><strong>Mobile</strong></summary>
+
+  <ul>
+    <li><a href="https://reactnative.dev/">React Native</a></li>
+  </ul>
+</details>
 
 ## EXECUTE
 
@@ -56,7 +94,7 @@ MOBILE | <a href="https://reactnative.dev/">React Native</a>
 
 Projeto desenvolvido durante a **Omni Stack Week 08** da <a href="https://rocketseat.com.br/">Rocketseat</a> ocorrida em **Agosto de 2019**
 
-Acesse <a href="https://github.com/rocketseat-education/semana-omnistack-8">aqui</a> o **repositório oficial** do Projeto
+Acesse <a href="https://github.com/rocketseat-education/semana-omnistack-8">aqui</a> o **repositório oficial**  da aplicação
 
 ## LICENÇA
 
@@ -64,4 +102,4 @@ Esse projeto está sob a **Licença MIT** veja o arquivo [LICENSE](https://githu
 
 ___
 
-<p align="center">✍🏻&nbsp;with&nbsp;❤️&nbsp;by&nbsp;<a href="https://github.com/alissonpratesperes">me</a>&nbsp👨🏻‍💻</p>
+<p align="center">👨🏻‍💻&nbsp;with&nbsp;❤️</p>
